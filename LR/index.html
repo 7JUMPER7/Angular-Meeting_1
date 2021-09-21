@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice cream calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <form method="get" action="showSumm()">
+        <div class="part" id="sizes">
+            <div class="header">Размер:</div>
+            <div class="body">
+                <div class="sizeSelector">
+                    <input id="small" type="radio" name="size" checked>
+                    <label for="small">Маленькое</label>
+                    <div class="price">10 грн</div>
+                </div>
+                <div class="sizeSelector">
+                    <input id="large" type="radio" name="size">
+                    <label for="large">Большое</label>
+                    <div class="price">25 грн</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="part hiddenElement" id="toppings">
+            <div class="header">Топпинги:</div>
+            <div class="body">
+                <label class="checkbox">
+                    <span class="checkbox__input">
+                      <input id="chocolate" type="checkbox" name="chocolate">
+                      <span class="checkbox__control">
+                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                          <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                      </span>
+                    </span>
+                    <span class="radio__label">Шоколад</span>
+                    <div class="price">5 грн</div>
+                </label>
+                <label class="checkbox">
+                    <span class="checkbox__input">
+                      <input id="caramel" type="checkbox" name="caramel">
+                      <span class="checkbox__control">
+                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                          <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                      </span>
+                    </span>
+                    <span class="radio__label">Карамель</span>
+                    <div class="price">6 грн</div>
+                </label>
+                <label class="checkbox">
+                    <span class="checkbox__input">
+                      <input id="berry" type="checkbox" name="berry">
+                      <span class="checkbox__control">
+                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                          <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                      </span>
+                    </span>
+                    <span class="radio__label">Ягоды</span>
+                    <div class="price">10 грн</div>
+                </label>           
+            </div>
+        </div>
+
+        <div class="part" id="addition">
+            <div class="header">Добавки:</div>
+            <div class="body">
+                <label class="checkbox">
+                    <span class="checkbox__input">
+                      <input id="marshmallow" type="checkbox" name="marshmallow">
+                      <span class="checkbox__control">
+                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                          <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                      </span>
+                    </span>
+                    <span class="radio__label">Маршмеллоу</span>
+                    <div class="price">5 грн</div>
+                </label>  
+            </div>
+        </div>
+
+        <input type="submit" value="Купить">
+
+        <div class="part hiddenElement" id="summ">
+            <div class="header">Сумма:</div>
+            <div class="body"></div>
+        </div>
+    </form>
+
+    <script src="dist/main.js"></script>
+</body>
+</html>

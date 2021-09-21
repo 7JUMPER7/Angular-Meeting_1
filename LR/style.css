@@ -1,0 +1,194 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(238, 252, 252);
+    align-items: center;
+    font-family: Bahnschrift;
+}
+
+form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(169, 244, 255);
+    box-shadow: 0px 0px 10px 3px rgba(43, 217, 244, 0.5);
+    transition: .3s cubic-bezier(.5, 0, 0, 1);
+}
+form .part {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 3px solid #ff98bc;
+    box-shadow: 0px 0px 10px 3px #ff98bcad;
+    background-color: white;
+    transition: .3s cubic-bezier(.5, 0, 0, 1);
+}
+form .part .header {
+    text-align: center;
+    background-color: #ff98bc;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+}
+form .part .body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 17px;
+    color: rgb(70, 70, 70);
+}
+form .part .sizeSelector {
+    display: flex;
+    flex-direction: row;
+}
+form .part .sizeSelector:not(:first-child) {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+form .part .checkbox {
+    display: flex;
+    flex-direction: row;
+}
+form .part .checkbox:not(:first-child) {
+    margin-top: 10px;
+}
+form .hiddenElement {
+    display: none;
+}
+.price {
+    font-weight: bold;
+    color: #ff98bc;
+    font-size: 20px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#summ {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+form [type="submit"] {
+    background-color: #ff98bc;
+    border: 3px solid #ff98bc;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 3px;
+    margin-bottom: 10px;
+    transition: .2s cubic-bezier(.4, 0, 0, 1);
+}
+form [type="submit"]:hover {
+    box-shadow: 0px 0px 10px 2px #ff98bcad;
+}
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #F87DA9;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.checkbox {
+    display: grid;
+    grid-template-columns: -webkit-min-content auto;
+    grid-template-columns: min-content auto;
+    grid-gap: 0.5em;
+    font-size: 1.1rem;
+    color: #F87DA9;
+  }
+  
+  .checkbox__control {
+    display: inline-grid;
+    width: 1em;
+    height: 1em;
+    border-radius: 0.25em;
+    border: 0.1em solid currentColor;
+  }
+  .checkbox__control svg {
+    transition: transform 0.1s ease-in 25ms;
+    transform: scale(0);
+    transform-origin: bottom left;
+  }
+  
+  .checkbox__input {
+    display: grid;
+    grid-template-areas: "checkbox";
+  }
+  .checkbox__input > * {
+    grid-area: checkbox;
+  }
+  .checkbox__input input {
+    opacity: 0;
+    width: 1em;
+    height: 1em;
+  }
+  .checkbox__input input:checked + .checkbox__control svg {
+    transform: scale(1);
+  }
+  .radio__label {
+      color: rgb(70, 70, 70);
+  }
